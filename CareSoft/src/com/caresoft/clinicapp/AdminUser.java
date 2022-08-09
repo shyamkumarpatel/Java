@@ -3,19 +3,14 @@ package com.caresoft.clinicapp;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class AdminUser implements HIPAACompliantUser {
+public class AdminUser extends User implements HIPAACompliantUser, HIPAACompliantAdmin {
 //... imports class definition...
     
-    // Inside class:
-    private Integer id;
-    private Integer pin;
-    private String role;
     private ArrayList<String> securityIncidents = new ArrayList<String>();
 
     // TO DO: Implement a constructor that takes an ID and a role
     AdminUser(Integer employeeID, String role){
-    	this.id = employeeID;
-    	this.role = role;
+    	super(employeeID);
     }
     // TO DO: Implement HIPAACompliantUser!
     // TO DO: Implement HIPAACompliantAdmin!

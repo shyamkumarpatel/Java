@@ -3,17 +3,17 @@ package com.caresoft.clinicapp;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Physician implements HIPAACompliantUser {
+public class Physician extends User implements HIPAACompliantUser {
 //... imports class definition...
-    int id;        
-    int pin;        
+    //int id;        
+    //int pin;        
     // Inside class:    
     private ArrayList<String> patientNotes;
 	
     // TO DO: Constructor that takes an ID
     // TO DO: Implement HIPAACompliantUser!
     Physician(int id){
-    	this.id = id;
+    	super(id);
     }
 	
     public void newPatientNotes(String notes, String patientName, Date date) {
